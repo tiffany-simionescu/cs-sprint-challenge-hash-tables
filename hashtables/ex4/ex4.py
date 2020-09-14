@@ -1,8 +1,23 @@
+import math
+
 def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    result = []
+
+    pos_nums = {}
+    neg_nums = {}
+
+    for num in a:
+        if num > 0:
+            pos_nums[num] = num
+        if num < 0:
+            neg_nums[num] = num
+
+    for num in neg_nums.items():
+        if abs(num[0]) in pos_nums:
+            result.append(abs(num[0]))
 
     return result
 
