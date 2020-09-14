@@ -23,11 +23,32 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+
+          - Hashing functions are designed to create hash tables for key / value data storage. You can input any data type and the output will always be a number. The same input will always return the same output, unless you modify the length of the hash table. A programmer has to be aware of possible collisions while creating a hashing function. The average runtime is O(1), the worst case is O(n)
+
 2. Collision resolution
+
+          - Collision resolution is a way to insure that the hash function is deterministic, or the prevention of different values being saved to the same key / index. You can use chaining to hold multiple values to a single key. You can also increase (or decrease) the size of the hash table based on the load factor, which will reassign key/value pairs. This method can be expensive, so it's best to only do this when necessary. 
+
 3. Performance of basic hash table operations
+
+          - The average runtime is Constant O(1).
+
 4. Load factor
+
+          - Load factor is the number of items in a hash table divided by the total number of slots available. The load factor can help determine if the hash table is too large, too small or just right. When you change the size of the hash table based on the load factor's calculation, you can increase the chances of a collision resolution.
+
 5. Automatic resizing
+
+          - When the value of the load factor is 0.7 or greater, you should increase the size of the hash table to double it's size. When the load factor is 0.2 or less, you should decrease the size of the hash table by half it's size. These values are just average case scenarios and are not set in stone. 
+
 6. Various use cases for hash tables
+
+          - Lookups - (phone book, DNS resolution, student records, library system)
+
+          - Duplicate Prevention - (storing users, voting system)
+
+          - Caching - (useful for servers when clients want to retrieve data and having the server not calculate which data to retrieve and/or send every single time)
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
